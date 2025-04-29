@@ -1,34 +1,92 @@
+/* General Styles */
 body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, grey);
+    height: 100vh;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+  
+  h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    margin-bottom: 2rem;
+  }
+  
+  /* Button Container */
+  .btn-container {
+    display: grid;
+    grid-template-columns: repeat(2, 220px);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Buttons */
   .btn {
     height: 200px;
     width: 200px;
     border-radius: 20%;
-    border: 5px solid black;
-    margin: 2.5rem;
-  }
-  .btn-container {
+    border: 5px solid white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
     display: flex;
     justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
   }
   
+  /* Color Variations */
   .red {
-    background-color: #d95980;
+    background: #ff4b5c;
   }
+  
   .yellow {
-    background-color: #f99b45;
+    background: #ffcc29;
   }
+  
   .green {
-    background-color: #63aac0;
+    background: #4cd137;
   }
+  
   .purple {
-    background-color: #819ff9;
+    background: #8e44ad;
   }
+  
+  /* Flash Effects */
   .gameflash {
-    background-color: white;
+    opacity: 0.5;
   }
+  
   .userflash {
-    background-color: green;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #2ecc71;
+  }
+  
+  /* Responsive */
+  @media (max-width: 500px) {
+    .btn-container {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+    .btn {
+      width: 150px;
+      height: 150px;
+    }
   }
   
